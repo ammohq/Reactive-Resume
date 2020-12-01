@@ -36,41 +36,17 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     {
-      resolve: 'gatsby-plugin-prefetch-google-fonts',
+      resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: [
-          {
-            family: 'Lato',
-            variants: ['400', '700'],
-          },
-          {
-            family: 'Montserrat',
-            variants: ['400', '500', '600', '700'],
-          },
-          {
-            family: 'Nunito',
-            variants: ['400', '600', '700'],
-          },
-          {
-            family: 'Open Sans',
-            variants: ['400', '600', '700'],
-          },
-          {
-            family: 'Raleway',
-            variants: ['400', '500', '700'],
-          },
-          {
-            family: 'Rubik',
-            variants: ['400', '500', '700'],
-          },
-          {
-            family: 'Source Sans Pro',
-            variants: ['400', '600', '700'],
-          },
-          {
-            family: 'Titillium Web',
-            variants: ['400', '600', '700'],
-          },
+          'Lato\:400,700',
+          'Montserrat\:400,500,600,700',
+          'Nunito\:400,600,700',
+          'Open Sans\:400,600,700',
+          'Raleway\:400,500,700',
+          'Rubik\:400,500,700',
+          'Source Sans Pro\:400,500,700',
+          'Titillium Web\:400,600,700'
         ],
       },
     },
