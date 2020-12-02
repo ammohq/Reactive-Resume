@@ -75,6 +75,11 @@
     "template": "onyx",
     "font": "Montserrat",
     "layout": {
+      "ammo": [
+        ["objective", "work", "education", "projects"],
+        ["hobbies", "languages", "awards", "certifications"],
+        ["skills", "references"]
+      ],
       "onyx": [
         ["objective", "work", "education", "projects"],
         ["hobbies", "languages", "awards", "certifications"],

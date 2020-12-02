@@ -1,5 +1,9 @@
 const templateOptions = [
   {
+    id: 'ammo',
+    name: 'Ammo',
+  },
+  {
     id: 'onyx',
     name: 'Onyx',
   },

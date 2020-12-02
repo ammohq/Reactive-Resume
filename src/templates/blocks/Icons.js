@@ -9,12 +9,14 @@ import {
   FaStackOverflow,
   FaBehance,
   FaGitlab,
-  FaBirthdayCake
+  FaBirthdayCake,
+  FaHome
 } from 'react-icons/fa';
 import { MdPhone, MdEmail } from 'react-icons/md';
 
 const Icons = {
   phone: MdPhone,
+  address: FaHome,
   website: FaGlobeAmericas,
   email: MdEmail,
   facebook: FaFacebookF,

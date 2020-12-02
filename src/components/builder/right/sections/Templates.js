@@ -14,6 +14,13 @@ const Templates = ({ id }) => {
 
   const previews = useStaticQuery(graphql`
     query {
+      ammo: file(relativePath: { eq: "templates/ammo.png" }) {
+        childImageSharp {
+          fluid(maxHeight: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       onyx: file(relativePath: { eq: "templates/onyx.png" }) {
         childImageSharp {
           fluid(maxHeight: 400) {
@@ -69,9 +76,11 @@ const Templates = ({ id }) => {
     });
   };
 
+  console.log(templateOptions);
+
   return (
     <section>
-      <Heading id={id} />
+      <Heading id={id}/>
 
       <div className="grid grid-cols-2 gap-8">
         {templateOptions.map((x) => (
@@ -85,6 +94,7 @@ const Templates = ({ id }) => {
               [styles.selected]: template === x.id,
             })}
           >
+            {previews[x.id] !== null &&
             <GatsbyImage
               alt={x.name}
               loading="eager"
@@ -92,6 +102,7 @@ const Templates = ({ id }) => {
               style={{ height: '230px' }}
               fluid={previews[x.id].childImageSharp.fluid}
             />
+            }
             <span>{x.name}</span>
           </div>
         ))}

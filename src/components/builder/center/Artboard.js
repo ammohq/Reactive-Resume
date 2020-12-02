@@ -7,6 +7,7 @@ import Celebi from '../../../templates/Celebi';
 import Gengar from '../../../templates/Gengar';
 import Glalie from '../../../templates/Glalie';
 import Onyx from '../../../templates/Onyx';
+import Ammo from '../../../templates/Ammo';
 import Pikachu from '../../../templates/Pikachu';
 import styles from './Artboard.module.css';
 
@@ -38,6 +39,7 @@ const Artboard = () => {
           transformOrigin: `${width / 1680 > 1.0 ? `top left` : ``}`,
         }}
       >
+        {template === 'ammo' && <Ammo data={state} />}
         {template === 'onyx' && <Onyx data={state} />}
         {template === 'pikachu' && <Pikachu data={state} />}
         {template === 'gengar' && <Gengar data={state} />}

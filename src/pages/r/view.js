@@ -12,6 +12,7 @@ import Onyx from '../../templates/Onyx';
 import Pikachu from '../../templates/Pikachu';
 import styles from './view.module.css';
 import Celebi from '../../templates/Celebi';
+import Ammo from '../../templates/Ammo';
 
 const ResumeViewer = ({ id }) => {
   const { t, i18n } = useTranslation();
@@ -55,6 +56,7 @@ const ResumeViewer = ({ id }) => {
           className={styles.page}
           style={{ backgroundColor: resume.metadata.colors.background }}
         >
+          {resume.metadata.template === 'ammo' && <Ammo data={resume} />}
           {resume.metadata.template === 'onyx' && <Onyx data={resume} />}
           {resume.metadata.template === 'pikachu' && <Pikachu data={resume} />}
           {resume.metadata.template === 'gengar' && <Gengar data={resume} />}
